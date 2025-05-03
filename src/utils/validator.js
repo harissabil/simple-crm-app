@@ -4,6 +4,9 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 // Indonesian phone number validation regex pattern
 const phoneRegex = /^\+62[0-9]{9,12}$/;
 
+// Regex to check if name contains numbers
+const nameContainsNumberRegex = /\d/;
+
 // Validator functions
 const validator = {
     // Validate name
@@ -18,6 +21,10 @@ const validator = {
 
         if (name.length > 50) {
             return 'Nama maksimal 50 karakter';
+        }
+
+        if (nameContainsNumberRegex.test(name)) {
+            return 'Nama tidak boleh mengandung angka';
         }
 
         return null; // no error
