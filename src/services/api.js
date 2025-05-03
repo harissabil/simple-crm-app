@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-// Create axios instance without base URL
+const API_URL = 'https://simplecrm-api.onrender.com';
+
+// Create axios instance with base URL
 const apiClient = axios.create({
+    baseURL: API_URL,
     headers: {
         'Content-Type': 'application/json',
     },

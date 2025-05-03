@@ -2,7 +2,6 @@
   "name": "simple-crm-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://simplecrm-api.onrender.com",
   "dependencies": {
     "@chakra-ui/react": "^3.17.0",
     "@chakra-ui/theme-tools": "^2.2.6",
